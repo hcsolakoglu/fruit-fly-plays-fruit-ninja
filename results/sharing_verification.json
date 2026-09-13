@@ -12,5 +12,19 @@
   },
   "invitation_hours": 24,
   "github_visibility": "unchanged private",
-  "runtime_credentials": "outside repository"
+  "runtime_credentials": "outside repository",
+  "invitation_fix": {
+    "checked_at": "2026-09-13T13:33:51.109028+00:00",
+    "checks": {
+      "redirect_preserves_invitation": true,
+      "page_without_cookies": true,
+      "api/config_without_cookies": true,
+      "web/app.js_without_cookies": true,
+      "data/scene3d.json_without_cookies": true,
+      "video_without_cookies": true,
+      "repository_blocked": true
+    },
+    "tests_passed": 16,
+    "access_model": "copyable invitation path; cookie-independent assets and APIs"
+  }
 }

@@ -2,6 +2,7 @@
 
 import argparse
 import hmac
+import io
 from http.cookies import CookieError, SimpleCookie
 from http.server import ThreadingHTTPServer
 import os
@@ -42,9 +43,14 @@ class ShareHandler(Handler):
         self.send_header("X-Frame-Options", "DENY")
         super().end_headers()
 
-    def authorized(self):
+    def authorized(self, supplied_token=None):
         if time.time() >= self.expires_at:
             self.send_error(410, "This temporary invitation has expired")
+            return False
+        if supplied_token is not None:
+            if hmac.compare_digest(supplied_token.encode(), self.token.encode()):
+                return True
+            self.send_error(403, "Invalid invitation")
             return False
         try:
             cookies = SimpleCookie(self.headers.get("Cookie", ""))
@@ -56,29 +62,42 @@ class ShareHandler(Handler):
         self.send_error(403, "Private demo: open the full invitation link you received")
         return False
 
-    def invite(self, path):
-        if not path.startswith("/invite/"):
+    def resolve_invitation(self):
+        """Keep authorization in the shareable URL; cookies are only a fallback."""
+        path = urlsplit(self.path).path
+        self.share_prefix = f"/invite/{self.token}/"
+        if path.startswith("/invite/"):
+            token, slash, relative = path[8:].partition("/")
+            if not self.authorized(token):
+                return False
+            if not slash:
+                self.redirect_to_invitation()
+                return False
+            self.path = "/" + relative
+            return True
+        if not self.authorized():
             return False
-        if time.time() >= self.expires_at:
-            self.send_error(410, "This temporary invitation has expired")
-        elif hmac.compare_digest(path[8:], self.token):
-            self.send_response(303)
-            ttl = max(0, int(self.expires_at - time.time()))
-            self.send_header(
-                "Set-Cookie",
-                f"fly_demo={self.token}; Path=/; Max-Age={ttl}; Secure; HttpOnly; SameSite=Lax",
-            )
-            self.send_header("Location", "/#experiment")
-            self.send_header("Content-Length", "0")
-            self.end_headers()
-        else:
-            self.send_error(403, "Invalid invitation")
+        self.path = path
+        if path in {"/", "/web/index.html"}:
+            self.redirect_to_invitation()
+            return False
         return True
 
+    def redirect_to_invitation(self):
+        self.send_response(303)
+        ttl = max(0, int(self.expires_at - time.time()))
+        self.send_header(
+            "Set-Cookie",
+            f"fly_demo={self.token}; Path=/; Max-Age={ttl}; Secure; HttpOnly; SameSite=Lax",
+        )
+        self.send_header("Location", self.share_prefix + "#experiment")
+        self.send_header("Content-Length", "0")
+        self.end_headers()
+
     def read_request(self, head=False):
-        path = urlsplit(self.path).path
-        if self.invite(path) or not self.authorized():
+        if not self.resolve_invitation():
             return
+        path = self.path
         if path not in self.allowed_files and path != "/api/config":
             self.send_error(404)
             return
@@ -100,6 +119,18 @@ class ShareHandler(Handler):
         self.read_request(head=True)
 
     def send_head(self):
+        if self.path == "/web/index.html":
+            html = (
+                (ROOT / "web/index.html")
+                .read_text()
+                .replace('<base href="/">', f'<base href="{self.share_prefix}">')
+                .encode()
+            )
+            self.send_response(200)
+            self.send_header("Content-Type", "text/html; charset=utf-8")
+            self.send_header("Content-Length", str(len(html)))
+            self.end_headers()
+            return io.BytesIO(html)
         if not self.path.endswith(".mp4"):
             return super().send_head()
         path = ROOT / self.path.lstrip("/")
@@ -147,7 +178,7 @@ class ShareHandler(Handler):
             remaining -= len(chunk)
 
     def do_POST(self):
-        if not self.authorized():
+        if not self.resolve_invitation():
             return
         origin = self.headers.get("Origin")
         if origin and urlsplit(origin).netloc != self.headers.get("Host"):

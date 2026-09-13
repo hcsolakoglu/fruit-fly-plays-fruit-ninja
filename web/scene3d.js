@@ -11,7 +11,7 @@ class FlyDeskScene {
     this.frame = 0;
     this.blade = [320, 260];
     this.drag = null;
-    fetch("/data/scene3d.json")
+    fetch("data/scene3d.json")
       .then((r) => r.json())
       .then((d) => {
         this.data = d;

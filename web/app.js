@@ -203,7 +203,7 @@ async function reset() {
   effects = [];
   try {
     draw(
-      await post("/api/reset", {
+      await post("api/reset", {
         condition: $("condition").value,
         seed: Number($("seed").value),
       }),
@@ -218,7 +218,7 @@ async function tick() {
     busy = true;
     let t = performance.now();
     try {
-      draw(await post("/api/step"));
+      draw(await post("api/step"));
       $("status").textContent =
         `${(performance.now() - t).toFixed(0)} ms / step`;
     } catch (e) {
@@ -264,10 +264,10 @@ const films = [
 $("filmgrid").innerHTML = films
   .map(
     ([n, t, s]) =>
-      `<a class="film" href="/videos/${n}.mp4"><img src="/videos/${n}.jpg" alt="${t}" loading="lazy"><div>${t}<small>${s}</small></div></a>`,
+      `<a class="film" href="videos/${n}.mp4"><img src="videos/${n}.jpg" alt="${t}" loading="lazy"><div>${t}<small>${s}</small></div></a>`,
   )
   .join("");
-fetch("/api/config")
+fetch("api/config")
   .then((r) => r.json())
   .then(async (c) => {
     cfg = c;
