@@ -1,0 +1,23 @@
+{
+  "dataset": "MaleCNS v1.0, minconf 0.5",
+  "source": "https://male-cns.janelia.org/download/",
+  "license": "CC-BY-4.0",
+  "nodes": 4386,
+  "edges": 468923,
+  "synapses": 4210625,
+  "visual_neurons": 2048,
+  "descending_neurons": 1314,
+  "interneurons": 1024,
+  "selection": "Top 1024 central-brain bridges by visual-incoming x descending-outgoing synapse counts; top 2048 visual projection neurons by input to bridge/DN set; all annotated descending neurons. Induced subgraph, no invented biological edges.",
+  "unknown_nt": 0,
+  "nt_counts": {
+    "acetylcholine": 3394,
+    "gaba": 521,
+    "glutamate": 409,
+    "unclear": 28,
+    "octopamine": 19,
+    "serotonin": 12,
+    "dopamine": 3
+  },
+  "dynamics": "Six tanh rate-propagation steps per observation, zero initial activity; W[post,pre]=NT-sign(pre)*count/sum_incoming(post); uniform gain 1.6. No biophysical time calibration."
+}

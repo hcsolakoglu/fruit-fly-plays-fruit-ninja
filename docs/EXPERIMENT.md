@@ -13,3 +13,7 @@ Compare matched seeds: intact graph, shuffled graph with refitted readout, cut e
 ## Deliverables
 
 Runnable closed loop, synchronized neural state recordings, five distinct edited MP4 videos, five post concepts, honest summary, local commits and verified private GitHub push. Graph visual placement must be labeled schematic unless actual soma coordinates are used. All published metrics derive from saved runs.
+
+## Protocol v2, locked 12:36 UTC
+
+Visual review of development recording exposed immediate slicing at the spawn boundary, which trivialized gameplay and left the scene empty. Reduce blade speed from 1500 to 700 pixels/second and constrain blade workspace to x=24..616, y=40..310. The bottom 170 pixels are a visible launch zone. No neural/readout changes. Preserve v1 data in results/protocol_v1 and rerun all conditions with identical v2 rules. Fresh final evaluation seeds 300–319, harder motion 400–409; earlier 100-series results are exploratory and not final holdouts. Development recordings still use seed 1. This is an environment revision, not evidence of learning.
