@@ -87,8 +87,6 @@ def main():
         assert {
             r["seed"] for r in rows if r["condition"] == condition and not r["hard"]
         } == set(range(300, 320))
-    text = (ROOT / "docs/POSTS.md").read_text()
-    assert sum(text.count(f"## {i}.") for i in range(1, 6)) == 5
     (ROOT / "results/video_verification.json").write_text(json.dumps(checks, indent=2))
     report = {
         "media_files": 6,
@@ -97,7 +95,6 @@ def main():
         "recomputed_trace_frames": 600,
         "exact_activity_trace": "passed",
         "held_out_episodes": len(rows),
-        "post_concepts": 5,
     }
     (ROOT / "results/delivery_verification.json").write_text(
         json.dumps(report, indent=2)

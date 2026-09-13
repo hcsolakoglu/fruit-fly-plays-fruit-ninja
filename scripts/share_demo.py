@@ -28,7 +28,6 @@ class ShareHandler(Handler):
         "/docs/RESULTS.md",
         "/docs/SOURCES.md",
         "/docs/EXPERIMENT.md",
-        "/docs/POSTS.md",
     } | {
         "/" + str(p.relative_to(ROOT))
         for p in (ROOT / "videos").iterdir()

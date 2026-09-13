@@ -39,7 +39,7 @@ For a remote viewer, use the [temporary invitation-only sharing server](docs/SHA
 
 Each video includes original synthesized music and event-timed effects. `videos/*.sources.json` maps every output frame to its saved source frame. Neural activity is sampled from the actual controller state; graph placement uses real soma coordinates. Video effects and camera movement are presentation only.
 
-[Results and limitations](docs/RESULTS.md) · [Five X post concepts](docs/POSTS.md) · [Provenance](docs/SOURCES.md) · [Frozen experiment contract](docs/EXPERIMENT.md)
+[Results and limitations](docs/RESULTS.md) · [Provenance](docs/SOURCES.md) · [Frozen experiment contract](docs/EXPERIMENT.md)
 
 ## What computes what
 

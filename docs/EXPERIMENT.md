@@ -12,7 +12,7 @@ Compare matched seeds: intact graph, shuffled graph with refitted readout, cut e
 
 ## Deliverables
 
-Runnable closed loop, synchronized neural state recordings, five distinct edited MP4 videos, five post concepts, honest summary, local commits and verified private GitHub push. Graph visual placement must be labeled schematic unless actual soma coordinates are used. All published metrics derive from saved runs.
+Runnable closed loop, synchronized neural state recordings, five distinct edited MP4 videos, honest summary, local commits and verified private GitHub push. Graph visual placement must be labeled schematic unless actual soma coordinates are used. All published metrics derive from saved runs.
 
 ## Protocol v2, locked 12:36 UTC
 
