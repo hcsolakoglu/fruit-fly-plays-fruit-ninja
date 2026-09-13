@@ -19,7 +19,7 @@ def main():
         for p in (ROOT / "results/recordings").glob("*.json")
     }
     videos = sorted((ROOT / "videos").glob("*.mp4"))
-    assert len(videos) == 5
+    assert len(videos) == 6
     checks = []
     for p in videos:
         probe = json.loads(
@@ -91,7 +91,7 @@ def main():
     assert sum(text.count(f"## {i}.") for i in range(1, 6)) == 5
     (ROOT / "results/video_verification.json").write_text(json.dumps(checks, indent=2))
     report = {
-        "media_files": 5,
+        "media_files": 6,
         "full_decodes": "passed",
         "frame_lineage": "passed",
         "recomputed_trace_frames": 600,

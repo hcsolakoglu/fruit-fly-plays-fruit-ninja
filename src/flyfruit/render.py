@@ -334,7 +334,8 @@ class Painter:
             16,
             MUTED,
         )
-        text(im, (width - 200, height - 36), "SOMA POSITIONS", 14, MUTED, mono=True)
+        if width >= 700:
+            text(im, (width - 200, height - 36), "SOMA POSITIONS", 14, MUTED, mono=True)
         return im
 
     def heat(self, field, width=432, height=208):

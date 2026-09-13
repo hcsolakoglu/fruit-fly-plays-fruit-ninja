@@ -1,0 +1,61 @@
+{
+  "protocol": "v2",
+  "training_seed": 42,
+  "evaluation_seeds": [
+    300,
+    301,
+    302,
+    303,
+    304,
+    305,
+    306,
+    307,
+    308,
+    309,
+    310,
+    311,
+    312,
+    313,
+    314,
+    315,
+    316,
+    317,
+    318,
+    319
+  ],
+  "hard_seeds": [
+    400,
+    401,
+    402,
+    403,
+    404,
+    405,
+    406,
+    407,
+    408,
+    409
+  ],
+  "episode_count": 130,
+  "paired_real_minus_rewired_reward": 0.05,
+  "paired_bootstrap_ci95": [
+    -0.3,
+    0.4
+  ],
+  "files": {
+    "src/flyfruit/__init__.py": "fbc2e39ea16d47cf79872366da9f8a96f8347d97c9e8eaae9a14c5e0948091c3",
+    "src/flyfruit/brain.py": "b8a11c8b2a803da363515838d424da840ddb49934f5b0876c2be673344cc2d3c",
+    "src/flyfruit/render.py": "96c1de5da9296f676a1d60dfafc311bb64008a4e105110dc71691166c542b9c7",
+    "src/flyfruit/scene3d.py": "7e265665c38c5bf3475ef42ec504d4a45c6c9bca5166b422716ee734f443d683",
+    "src/flyfruit/vision.py": "d6e5938911220772cfb727de804ffd46bbbefbe58c8360d6269e36ba2eb9a0aa",
+    "src/flyfruit/world.py": "c6b7cca142c10ec4077c1140e4fb44d36b6ca9464faf9bbe7fc231eff768ef71",
+    "data/connectome.npz": "b62761476824f80134581059011480188ab642b3fa040ee0dfd80993b7943fcc",
+    "data/display.npz": "349ccb7b54ae03a4d1132239ddc4e90c9e46900e1de23aece93fd4ce1ac2ece7",
+    "data/edges.npz": "42d0084e345cc53b464e6ec71f0ab277c6db71da6df0721924768862f834b588",
+    "data/interface.npz": "31572d555dbef77fe7ed8c33882a90fec4879d0de869853044a04c9cc4c800cf",
+    "data/readout.npz": "b477cc49098ff189f4b11ebb74229e3f2aba050ceaa9ce71dd1e156124e7efb4",
+    "data/readout_rewired.npz": "fe8ebe54c7eef247effce6931ccc76c5600014b222c1341133b8061f5de94115",
+    "data/rewired.npz": "5684695fe8d354553292bebbe5ad0b12e472ff7dab33dec607bc7c921c8853fa",
+    "data/scene3d.json": "6bb1ea052752a5c5b714dd2ea1264fc285e532f90879d1e0f638d42f597deb04"
+  },
+  "presentation": "3D fly-at-PC stage added at user request; controller and evaluation unchanged"
+}

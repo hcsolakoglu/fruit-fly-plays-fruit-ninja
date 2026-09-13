@@ -1,0 +1,11 @@
+{
+  "surface": "Codex in-app browser, http://127.0.0.1:8787/#experiment",
+  "live_loop": "passed",
+  "observed_run": "67.6 simulated seconds, 98 fruit and 6 bombs on UI seed 7; sanity check, not part of the 130-episode evaluation",
+  "rewired_mode": "selected and ran successfully before 3D addition",
+  "3d_monitor_texture": "actual live game visible on the modeled PC screen",
+  "orbit_drag": "changed camera from side to rear view while game continued",
+  "view_switch": "2D and 3D switches preserved the same score and run",
+  "camera_reset": "passed",
+  "delivery_state": "3D view paused and ready to resume"
+}

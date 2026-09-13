@@ -1,0 +1,3 @@
+intact {'train_scenes': 6500, 'validation_scenes': 600, 'mse': 1.2469196008169092e-05, 'zero_predictor_mse': 0.0026254847180098295, 'active_output_neurons': 1314, 'ridge_lambda': 10.0}
+rewired {'train_scenes': 6500, 'validation_scenes': 600, 'mse': 3.5521384234016296e-06, 'zero_predictor_mse': 0.0026254847180098295, 'active_output_neurons': 1314, 'ridge_lambda': 10.0}
+DONE 19.620725870132446

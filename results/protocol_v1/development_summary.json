@@ -1,0 +1,62 @@
+{
+  "intact": {
+    "episodes": 3,
+    "fruit_sliced": 105,
+    "fruit_spawned": 105,
+    "bombs_hit": 6,
+    "bombs_spawned": 32,
+    "mean_reward": 29.0,
+    "reward_sd": 7.937253933193772,
+    "mean_hit_rate": 1.0
+  },
+  "rewired": {
+    "episodes": 3,
+    "fruit_sliced": 105,
+    "fruit_spawned": 105,
+    "bombs_hit": 6,
+    "bombs_spawned": 32,
+    "mean_reward": 29.0,
+    "reward_sd": 7.937253933193772,
+    "mean_hit_rate": 1.0
+  },
+  "disconnected": {
+    "episodes": 3,
+    "fruit_sliced": 0,
+    "fruit_spawned": 105,
+    "bombs_hit": 0,
+    "bombs_spawned": 32,
+    "mean_reward": 0.0,
+    "reward_sd": 0.0,
+    "mean_hit_rate": 0.0
+  },
+  "blind": {
+    "episodes": 3,
+    "fruit_sliced": 0,
+    "fruit_spawned": 105,
+    "bombs_hit": 0,
+    "bombs_spawned": 32,
+    "mean_reward": 0.0,
+    "reward_sd": 0.0,
+    "mean_hit_rate": 0.0
+  },
+  "random": {
+    "episodes": 3,
+    "fruit_sliced": 31,
+    "fruit_spawned": 105,
+    "bombs_hit": 10,
+    "bombs_spawned": 32,
+    "mean_reward": 0.3333333333333333,
+    "reward_sd": 5.131601439446884,
+    "mean_hit_rate": 0.3113294493268819
+  },
+  "pixel": {
+    "episodes": 3,
+    "fruit_sliced": 105,
+    "fruit_spawned": 105,
+    "bombs_hit": 6,
+    "bombs_spawned": 32,
+    "mean_reward": 29.0,
+    "reward_sd": 7.937253933193772,
+    "mean_hit_rate": 1.0
+  }
+}

@@ -17,3 +17,7 @@ Runnable closed loop, synchronized neural state recordings, five distinct edited
 ## Protocol v2, locked 12:36 UTC
 
 Visual review of development recording exposed immediate slicing at the spawn boundary, which trivialized gameplay and left the scene empty. Reduce blade speed from 1500 to 700 pixels/second and constrain blade workspace to x=24..616, y=40..310. The bottom 170 pixels are a visible launch zone. No neural/readout changes. Preserve v1 data in results/protocol_v1 and rerun all conditions with identical v2 rules. Fresh final evaluation seeds 300–319, harder motion 400–409; earlier 100-series results are exploratory and not final holdouts. Development recordings still use seed 1. This is an environment revision, not evidence of learning.
+
+## User steering, 12:50 UTC
+
+Add a 3D mode showing a fruit fly at a PC screen. Implement as an orbitable 3D presentation around the existing live monitor texture. No controller, task rules or evaluation changes. Preserve the five edits and add a sixth 3D video with real trace texture. Body and foreleg animation are engineered presentation, not simulated biological embodiment.

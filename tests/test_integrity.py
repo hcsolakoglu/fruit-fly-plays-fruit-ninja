@@ -61,6 +61,20 @@ class Integrity(unittest.TestCase):
 
         self.assertEqual(roll(), roll())
 
+    def test_3d_scene_has_depth_and_orbit(self):
+        import json
+        from flyfruit.scene3d import projection
+
+        scene = json.loads((ROOT / "data/scene3d.json").read_text())
+        self.assertEqual(sum(f["tag"] == "screen" for f in scene["faces"]), 1)
+        points = np.array([p for f in scene["faces"] for p in f["p"]])
+        self.assertTrue((np.ptp(points, axis=0) > 1).all())
+        a = projection(points, 1440, 920, yaw=0.5)
+        b = projection(points, 1440, 920, yaw=0.9)
+        self.assertTrue(np.isfinite(a).all())
+        self.assertGreater(float(np.linalg.norm(a[:, :2] - b[:, :2])), 100)
+        self.assertTrue(any(f.get("motion") == "foreleg" for f in scene["faces"]))
+
     def test_blank_pixels_no_cut(self):
         self.assertFalse(motor(encode(World().pixels()))[2])
 

@@ -1,0 +1,14 @@
+test_3d_scene_has_depth_and_orbit (test_integrity.Integrity.test_3d_scene_has_depth_and_orbit) ... ok
+test_blank_pixels_no_cut (test_integrity.Integrity.test_blank_pixels_no_cut) ... ok
+test_cut_wiring_removes_all_descending_signal (test_integrity.Integrity.test_cut_wiring_removes_all_descending_signal) ... ok
+test_deterministic_closed_loop (test_integrity.Integrity.test_deterministic_closed_loop) ... ok
+test_identical_seed_different_actions_preserve_launch_schedule (test_integrity.Integrity.test_identical_seed_different_actions_preserve_launch_schedule) ... ok
+test_no_input_output_overlap (test_integrity.Integrity.test_no_input_output_overlap) ... ok
+test_rewire_not_same_matrix (test_integrity.Integrity.test_rewire_not_same_matrix) ... ok
+test_source_edges_and_normalization (test_integrity.Integrity.test_source_edges_and_normalization) ... ok
+test_visible_pixel_change_changes_neural_output (test_integrity.Integrity.test_visible_pixel_change_changes_neural_output) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.614s
+
+OK

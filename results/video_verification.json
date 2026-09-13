@@ -1,0 +1,80 @@
+[
+  {
+    "file": "videos/01_tiny_sword.mp4",
+    "sha256": "41cc79a8c24f910db3681818e60a7e4f7c9805ad693590c7434e1b574e8d04fc",
+    "width": 1080,
+    "height": 1920,
+    "frames": 600,
+    "duration": 20.0,
+    "bytes": 12431673,
+    "video_codec": "h264",
+    "audio_codec": "aac",
+    "full_decode": "passed",
+    "frame_lineage": "passed"
+  },
+  {
+    "file": "videos/02_pixels_to_neurons.mp4",
+    "sha256": "fe69780040bc530bfd48d07eabef824f0bf016a36687cd869430ff5c3c853652",
+    "width": 1080,
+    "height": 1920,
+    "frames": 660,
+    "duration": 22.0,
+    "bytes": 13486425,
+    "video_codec": "h264",
+    "audio_codec": "aac",
+    "full_decode": "passed",
+    "frame_lineage": "passed"
+  },
+  {
+    "file": "videos/03_cut_the_wiring.mp4",
+    "sha256": "56c0b68ecd57e0113e055a7089240c02e1a398f0f2eb74cfdf5e64a6bc9f5607",
+    "width": 1920,
+    "height": 1080,
+    "frames": 600,
+    "duration": 20.0,
+    "bytes": 2017143,
+    "video_codec": "h264",
+    "audio_codec": "aac",
+    "full_decode": "passed",
+    "frame_lineage": "passed"
+  },
+  {
+    "file": "videos/04_fruit_vs_bomb.mp4",
+    "sha256": "8e7fda687cb0f44e4098ed0a818fb60c2e9432308effe8703741c0bb210b1022",
+    "width": 1080,
+    "height": 1920,
+    "frames": 600,
+    "duration": 20.0,
+    "bytes": 8721989,
+    "video_codec": "h264",
+    "audio_codec": "aac",
+    "full_decode": "passed",
+    "frame_lineage": "passed"
+  },
+  {
+    "file": "videos/05_real_vs_rewired.mp4",
+    "sha256": "b7694232ef5d2fec258bd5b355e3acc0efad6a84f229bebcf87e9b69689028b1",
+    "width": 1080,
+    "height": 1920,
+    "frames": 720,
+    "duration": 24.0,
+    "bytes": 9775633,
+    "video_codec": "h264",
+    "audio_codec": "aac",
+    "full_decode": "passed",
+    "frame_lineage": "passed"
+  },
+  {
+    "file": "videos/06_fly_at_pc_3d.mp4",
+    "sha256": "8bd192eb961027f04468036429657924af6c3dd168e25e5d891ff63edbaeafad",
+    "width": 1920,
+    "height": 1080,
+    "frames": 600,
+    "duration": 20.0,
+    "bytes": 5523258,
+    "video_codec": "h264",
+    "audio_codec": "aac",
+    "full_decode": "passed",
+    "frame_lineage": "passed"
+  }
+]

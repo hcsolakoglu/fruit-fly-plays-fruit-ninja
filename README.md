@@ -8,6 +8,9 @@ This is a reduced, fixed-connectivity rate model with engineered visual and moto
 
 ## Run the live experiment
 
+The default view is a **3D fruit fly at a PC**, with the actual live game on its monitor. Drag to orbit and scroll to zoom; switch to **2D · Neural lab** for the instrument view. The fly mesh, moving mouse and foreleg are presentation; the underlying connectome controller is identical in both views. The 3D geometry is rendered with CPU-side projection and Canvas2D, without a WebGL dependency.
+
+
 Python 3.12+ recommended. No GPU is needed for playback or live inference.
 
 ```bash
@@ -21,10 +24,11 @@ Open **http://127.0.0.1:8787** and press **Start experiment**. Switch among meas
 
 The compact graph, fitted readouts, experiment outputs, traces and five finished videos are included. Raw 1.1 GB connectivity is not required to run.
 
-## Watch the five edits
+## Watch the five edits + a 3D bonus
 
 | Video | Angle | Format |
 |---|---|---|
+| [Fly at a PC — 3D bonus](videos/06_fly_at_pc_3d.mp4) | Orbiting fly-at-PC scene, live trace on monitor | 1920 × 1080, 20s |
 | [Tiny sword](videos/01_tiny_sword.mp4) | Four-shot gameplay montage at 1.5× | 1080 × 1920, 20s |
 | [Pixels to neurons](videos/02_pixels_to_neurons.mp4) | Sensory field, neural computation, motor output | 1080 × 1920, 22s |
 | [Cut the wiring](videos/03_cut_the_wiring.mp4) | Matched-seed causal ablation | 1920 × 1080, 20s |
@@ -52,6 +56,8 @@ OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python -m unittest discover -s tests -v
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python scripts/run_experiment.py --dev
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python scripts/run_experiment.py
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python scripts/render_videos.py
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python scripts/render_3d.py
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python scripts/verify_delivery.py
 ```
 
 FFmpeg with libx264 and DejaVu Sans fonts are needed for rendering. Rendering uses CPU and streams frames to FFmpeg. Development seeds 0–2 are used for recordings; the main montage uses all three, while the other videos use seed 1; evaluation uses 300–319 for six conditions and 400–409 for faster-motion intact runs. Every episode runs 600 frames (20 simulated seconds), with identical seeded launch schedules across conditions. Some objects remain in flight at the cutoff; the denominator includes every spawned fruit. Raw per-episode outcomes are in `results/evaluation.json`.

@@ -6,3 +6,5 @@ data/*raw*
 results/*features*
 *.tmp
 *.wav
+results/video_check/
+results/preview.png

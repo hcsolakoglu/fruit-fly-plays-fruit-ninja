@@ -49,7 +49,7 @@ lines += [
     "- All 468,923 connections in the intact reservoir correspond to published MaleCNS neuron pairs. Relative incoming synapse counts are retained, with engineered normalization and coarse transmitter signs.",
     "- The disconnected and blinded interventions eliminate scoring on the same launches. This supports causal dependence of this controller on sensory drive and connectome propagation.",
     "- The controller works on fresh seeds. Faster-motion episodes also run successfully; their higher fruit score may reflect fruit spending more time inside the blade workspace, not improved reaction ability.",
-    "- Five videos use actual development traces (seeds 0–2 for the main montage; seed 1 for the others), not the final evaluation episodes. Their quantitative comparison card uses all final evaluation episodes. Event particles and sound are editorial effects tied to recorded collisions.",
+    "- Five main videos plus a 3D bonus use actual development traces (seeds 0–2 for the main montage; seed 1 for the others), not the final evaluation episodes. Their quantitative comparison card uses all final evaluation episodes. Event particles and sound are editorial effects tied to recorded collisions.",
     "",
     "## What did not work / what is not established",
     "",
@@ -77,7 +77,7 @@ lines += [
     "",
     "Per-episode rows: `results/evaluation.json`. Aggregate values: `results/evaluation_summary.json`. Training evidence: `results/training.json`. Reproducible recordings: `results/recordings`. Frame lineage: `videos/*.sources.json`. Integrity tests check real-edge preservation, sensory-to-output influence, zero descending signal after disconnection, deterministic closed-loop behavior, and matched launch schedules.",
     "",
-    "The visual trace at index f contains the rates computed from the observation before step f; its displayed game snapshot is the resulting state after that action. This is the one-step causal ordering, not a fabricated simultaneous measurement.",
+    "The 3D stage is an orbitable fly-at-PC mesh with the actual game trace on the monitor. Its body geometry, mouse/foreleg motion and camera are engineered presentation; this is not a biological fly-body simulation. The neural inset remains actual recorded activity.\n\nThe visual trace at index f contains the rates computed from the observation before step f; its displayed game snapshot is the resulting state after that action. This is the one-step causal ordering, not a fabricated simultaneous measurement.",
     "",
     "Compute: one Colab NVIDIA L4 session, explicitly terminated after artifact retrieval. The successful fitting pass took approximately 19.6 seconds including synthetic scene construction and GPU solves. The CLI did not provide reliable exact credit consumption. No local GPU was used. Local CPU handled preprocessing inspection, evaluation, rendering, and the live server.",
 ]
