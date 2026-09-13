@@ -24,6 +24,8 @@ Open **http://127.0.0.1:8787** and press **Start experiment**. Switch among meas
 
 The compact graph, fitted readouts, experiment outputs, traces and five finished videos are included. Raw 1.1 GB connectivity is not required to run.
 
+For a remote viewer, use the [temporary invitation-only sharing server](docs/SHARING.md). It serves the live experiment and films through an HTTPS tunnel, with a 24-hour invitation and a restricted file allowlist.
+
 ## Watch the five edits + a 3D bonus
 
 | Video | Angle | Format |

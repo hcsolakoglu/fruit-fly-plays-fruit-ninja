@@ -1,0 +1,16 @@
+{
+  "checked_at": "2026-09-13T13:27:20.783562+00:00",
+  "checks": {
+    "anonymous_denied": true,
+    "repository_denied": true,
+    "page_https": true,
+    "scene_https": true,
+    "video_range": true,
+    "live_reset": true,
+    "live_step": true,
+    "browser_live_run": "Observed 33 fruit and 6 bombs over public HTTPS; 3D scene and neural activity displayed"
+  },
+  "invitation_hours": 24,
+  "github_visibility": "unchanged private",
+  "runtime_credentials": "outside repository"
+}
