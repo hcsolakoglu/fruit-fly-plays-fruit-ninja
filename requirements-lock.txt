@@ -25,5 +25,5 @@ scipy==1.17.1
     # via -r requirements-lock.txt
 six==1.17.0
     # via python-dateutil
-urllib3==2.7.0
+urllib3==2.8.0
     # via requests
